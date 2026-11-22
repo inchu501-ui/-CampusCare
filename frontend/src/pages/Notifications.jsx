@@ -35,8 +35,8 @@ function Notifications() {
         <div style={{
             display: "flex",
             minHeight: "100vh",
-            background: "#f6f6ef",
-            color: "#153d2e"
+            background: "#F7F8F5",
+color: "#263247"
         }}>
 
             {/* SIDEBAR */}
@@ -69,7 +69,7 @@ function Notifications() {
             }}>
 
                 <p style={{
-                    color: "#718477",
+                    color: "#64748B",
                     fontSize: "17px",
                     marginBottom: "35px"
                 }}>
@@ -78,7 +78,10 @@ function Notifications() {
 
                 {/* HEADER */}
                 <div style={{
-                    background: "#dcebc9",
+                    background: "linear-gradient(120deg, #E8F1EB, #F7F8F5)",
+border: "1px solid #DCE8DD",
+borderLeft: "5px solid #F2B53A",
+boxShadow: "0 8px 24px rgba(11, 19, 37, 0.05)",
                     borderRadius: "28px",
                     padding: "40px 50px",
                     display: "flex",
@@ -90,7 +93,7 @@ function Notifications() {
                 }}>
                     <div>
                         <p style={{
-                            color: "#56805b",
+                            color: "#0B1325",
                             letterSpacing: "3px",
                             fontWeight: "bold",
                             fontSize: "13px"
@@ -101,25 +104,25 @@ function Notifications() {
                         <h1 style={{
                             fontSize: "36px",
                             margin: "15px 0",
-                            color: "#123d2e"
+                          color: "#0B1325"
                         }}>
                             Your Notifications
                         </h1>
 
                         <p style={{
                             fontSize: "17px",
-                            color: "#62796b"
+                            color: "#64748B"
                         }}>
                             Every update brings your campus one step closer to better.
                         </p>
                     </div>
 
                     <div style={{
-                        background: "#c5ed82",
+                       background: "#A9CDBE",
                         padding: "25px",
                         borderRadius: "30px"
                     }}>
-                        <Bell size={55} color="#174532" />
+                        <Bell size={55} color="#0B1325" />
                     </div>
                 </div>
 
@@ -130,12 +133,12 @@ function Notifications() {
                     alignItems: "center",
                     marginBottom: "22px"
                 }}>
-                    <h2 style={{ fontSize: "25px" }}>
+                    <h2 style={{ fontSize: "25px", color: "#0B1325" }}>
                         Recent Activity
                     </h2>
 
                     <span style={{
-                        color: "#66816a",
+                        color: "#64748B",
                         fontSize: "13px",
                         letterSpacing: "1px"
                     }}>
@@ -148,15 +151,15 @@ function Notifications() {
                     <p>Loading notifications...</p>
                 ) : notifications.length === 0 ? (
                     <div style={{
-                        background: "white",
-                        padding: "55px 20px",
-                        borderRadius: "20px",
-                        textAlign: "center",
-                        border: "1px solid #e5e7dd"
+                        background: "#FFFFFF",
+padding: "55px 20px",
+borderRadius: "20px",
+textAlign: "center",
+border: "1px dashed #C5D5CD",
+boxShadow: "0 5px 18px rgba(11, 19, 37, 0.04)"
                     }}>
-                        <Bell size={45} color="#71945e" />
-                        <h3>No notifications yet</h3>
-                        <p style={{ color: "#829084" }}>
+<Bell size={45} color="#0B1325" />                      <h3 style={{ color: "#0B1325" }}>No notifications yet</h3>
+                       <p style={{ color: "#64748B" }}>
                             Updates about your complaints will appear here.
                         </p>
                     </div>
@@ -167,39 +170,42 @@ function Notifications() {
                     }}>
                         {notifications.map((item) => (
                             <div key={item.notification_id} style={{
-                                background: "white",
+                                background: "#FFFFFF",
+border: "1px solid #E2E8F0",
+boxShadow: "0 5px 18px rgba(11, 19, 37, 0.04)",
                                 padding: "23px",
                                 borderRadius: "18px",
-                                border: "1px solid #e7e9df",
+                               
                                 display: "flex",
                                 gap: "18px",
                                 alignItems: "center"
                             }}>
                                 <div style={{
-                                    background: "#e7f3d8",
+                                    background: "#E8F1EB",
                                     padding: "14px",
                                     borderRadius: "14px"
                                 }}>
-                                    <Bell size={23} color="#507b48" />
+                                    <Bell size={23} color="#0B1325" />
                                 </div>
 
                                 <div style={{ flex: 1 }}>
-                                    <h3 style={{
-                                        fontSize: "16px",
-                                        marginBottom: "8px"
-                                    }}>
+                                   <h3 style={{
+    fontSize: "16px",
+    marginBottom: "8px",
+    color: "#0B1325"
+}}>
                                         Complaint Update
                                     </h3>
 
                                     <p style={{
-                                        color: "#65766a",
+                                        color: "#64748B",
                                         lineHeight: "1.6"
                                     }}>
                                         {item.message}
                                     </p>
 
                                     <small style={{
-                                        color: "#89958b",
+                                        color: "#94A3B8",
                                         display: "flex",
                                         alignItems: "center",
                                         gap: "6px",
@@ -221,8 +227,8 @@ function Notifications() {
                         padding: "12px 20px",
                         border: "none",
                         borderRadius: "10px",
-                        background: "#c5ed82",
-                        color: "#153d2e",
+                        background: "#0B1325",
+color: "#A9CDBE",
                         fontWeight: "bold",
                         cursor: "pointer",
                         display: "flex",

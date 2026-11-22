@@ -71,22 +71,26 @@ if (response.data.user.role === "Admin") {
             <Mail size={18} />
 <input
   type="email"
+  name="email"
+  autoComplete="off"
   placeholder="Enter your email"
   value={email}
   onChange={(e) => setEmail(e.target.value)}
   required
-/>          </div>
+/>        </div>
 
           <label>Password</label>
           <div className="auth-input">
             <LockKeyhole size={18} />
 <input
   type="password"
+  name="password"
+  autoComplete="off"
   placeholder="Enter your password"
   value={password}
   onChange={(e) => setPassword(e.target.value)}
   required
-/>          </div>
+/>         </div>
 
           <button type="submit" className="auth-submit">
             Sign In →
